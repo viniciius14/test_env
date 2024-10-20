@@ -6,10 +6,10 @@ apt-get install x11-xserver-utils
 xhost +local:docker
 
 # Make the Image
-docker build misc/docker
+sudo docker build misc/docker
 
 # Run the container
-docker run -it \
+sudo docker run -it \
     --env="DISPLAY" \
     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
     --device=/dev/kvm \
