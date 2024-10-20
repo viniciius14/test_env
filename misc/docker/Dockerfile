@@ -4,13 +4,9 @@ RUN apt-get update
 RUN apt-get install -y
 
 
-RUN apt-get qemu
-RUN apt-get qemu-kvm
-RUN apt-get libvirt-daemon-system
-RUN apt-get libvirt-clients
-RUN apt-get bridge-utils
-RUN apt-get virt-manager
-RUN apt-get x11-apps
+RUN apt-get update && apt-get install -y \
+    qemu qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager \
+    x11-apps
 
 # Set the environment variable for X11 forwarding
 ENV DISPLAY=:0
