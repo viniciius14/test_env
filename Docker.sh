@@ -6,7 +6,7 @@ apt-get install x11-xserver-utils
 xhost +local:docker
 
 # Make the Image
-docker build .
+docker build misc/docker
 
 # Run the container
 docker run -it \
