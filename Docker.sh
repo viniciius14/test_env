@@ -1,5 +1,4 @@
 # Requirements
-
 sudo apt install docker.io
 sudo systemctl start docker
 apt-get install x11-xserver-utils
@@ -14,4 +13,4 @@ sudo docker run -it \
     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
     --device=/dev/kvm \
     --privileged \
-    GeckOS_Container
+    geckos_container
